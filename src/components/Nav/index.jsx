@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Nav/index.css'
-
+import Logo from "../Logo"
 const Nav = () => {
     return (
         <>
@@ -8,14 +8,19 @@ const Nav = () => {
 
                 <div className="titleDesc">
                     <div className="logo">
-                        <img src="#" alt="" />
+                    <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"}/>
                     </div>
                     <h1 className='titleSteam'>STEAM MEDICAL</h1>
                 </div>
 
                 <div className="links">
-                    <ul><li><a href="#">Contact us</a></li></ul>
-                    <ul><li><a href="#">Services</a></li></ul>
+                    <ul><li>
+                    
+                        <a href='\Login'>Contact us</a></li>
+                        </ul>
+
+
+                    <ul><li><a href="\Citas">Services</a></li></ul>
                     <ul><li><a href="#">About</a></li></ul>
                 </div>
 
