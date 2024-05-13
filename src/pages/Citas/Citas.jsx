@@ -2,13 +2,16 @@ import React, { useContext } from "react";
 import useForm from "../../hook/useForm";
 import { AppContext } from "../../context/AppContext";
 import Card from "../../components/Card/Card";
-
+import Nav from "../../components/Nav/index";
 const Citas = () => {
   const { data, isMobileDevice } = useContext(AppContext);
   console.log("hola");
 
   return (
-    <div
+    <>
+
+    <Nav/>
+<div
       style={{
         display: "flex",
         alignItems: "center",
@@ -56,6 +59,8 @@ const Citas = () => {
         ))}
       </div>
     </div>
+    </>
+   
   );
 };
 

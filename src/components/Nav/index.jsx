@@ -22,16 +22,27 @@ const Nav = () => {
                 </div>
 
                 <div className="links">
-                    <ul><li onClick={handleButtonClick}>
-                   
+                    <ul><li >
+                    <Link to="/Login">
                     <a href="">Inicia Sesion</a>
-                   
+                    </Link>
                         </li>
                         </ul>
 
 
-                    <ul><li><a href="/Citas">Services</a></li></ul>
-                    <ul><li><a href="/">About</a></li></ul>
+                    <ul><li>
+                    <Link to="/Citas">
+                        <a href="">Services</a>
+                        </Link>
+                        </li></ul>
+
+                    <ul><li>
+                    <Link to="/">
+                    <a href="">About</a>
+                    </Link>
+                       
+                        
+                        </li></ul>
                 </div>
 
 
