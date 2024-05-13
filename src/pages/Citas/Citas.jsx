@@ -17,6 +17,7 @@ const Citas = () => {
         backgroundColor: "#ffff",
       }}
     >
+     
       <div
         style={{
           backgroundImage: "url('../../../public/img/citas1.jpg')",

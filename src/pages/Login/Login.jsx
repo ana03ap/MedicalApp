@@ -93,7 +93,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
               }}
               onClick={(e) => {
                 e.preventDefault();
-                
+               
               }}
             >
               <Google width={2} color={"#fff"} />

@@ -13,15 +13,17 @@ const App = () => {
   const [showFooter, setShowFooter] = useState(true)
   return (
     <>
-        {
+        {/* {
             showNav && <Nav />
-        }
+        } */}
 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                
+                <Route path="/Nav" element={<Nav />} />
+                <Route path="/" element={<HomePage setShowNav={setShowNav} setShowFooter={setShowFooter}  />} />
                 <Route path="/Login" element={<Login setShowNav={setShowNav} setShowFooter={setShowFooter}  />} />
-                <Route path="/Citas" element={<Citas />} />
+                <Route path="/Citas" element={<Citas setShowNav={setShowNav} setShowFooter={setShowFooter}  />} />
             </Routes>
         </BrowserRouter>
 

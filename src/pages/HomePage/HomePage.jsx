@@ -1,20 +1,21 @@
 import React, { useContext } from 'react'
-
 import '../HomePage/index.css'
-
+import Nav from '../../components/Nav/index'
 const HomePage = () => {
     
-    return (
+    return ( 
     <div class="container">
+        <Nav/>
+
         <div class="row">
             <div id="section1" class="column">
 
-            <img src='../../../img/homepage1.jpg'alt="" />
+            <img src='../../../img/homepage1.png'alt="" />
             </div>
         </div>
         <div class="row">
             <div id="section2" class="column">
-
+            
             <img src='../../../img/homepage2.jpg' alt="" />
             </div>
         </div>

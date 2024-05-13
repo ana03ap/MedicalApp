@@ -1,9 +1,15 @@
+
 import React from 'react'
 import '../Nav/index.css'
 import Logo from "../Logo"
+import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 const Nav = () => {
-  
+    const navigate = useNavigate();
+    const handleButtonClick = () => {
+        // Navegar a una ruta específica cuando se hace clic en el botón
+        navigate('/Login');
+      };
     return (
         <>
             <nav className='navBar'>
@@ -16,10 +22,11 @@ const Nav = () => {
                 </div>
 
                 <div className="links">
-                    <ul><li>
+                    <ul><li onClick={handleButtonClick}>
                    
-
-                        <a href='/Login'>Inicia Sesión </a></li>
+                    <a href="">Inicia Sesion</a>
+                   
+                        </li>
                         </ul>
 
 
