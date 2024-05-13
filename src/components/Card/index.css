@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  .ContainerCard {
+    padding: 2pc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1pc;
+  }
+  
+  
+  
+  .Card {
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5pc 0.5pc;
+    gap: 1pc;
+    background-color: #858997;
+    box-shadow: 0px 4px 4px 0px rgba(110, 104, 104, 0.53);
+  }
+  .Card #persona {
+    width: 10pc;
+    border-radius: 8px 0 0 8px;
+  }
+  .Card #pais {
+    width: 5pc;
+    border-radius: 8px 0 0 8px;
+  }
+  .Card h1,p{
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+  }
+  .Card h1 {
+    white-space: nowrap;
+    width: 230px;
+    font-size: 24px;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+  }
+  

@@ -10,7 +10,7 @@ import ReactIcon, {
   Google,
   Instagram,
   YouTube,
-} from "../../../public/img/svg";
+} from "../../../public/svg/index";
 import ApiMedical from "../../Api/Medical";
 import Logo from "../../components/Logo";
 import useForm from "../../hook/useForm";
@@ -18,11 +18,13 @@ import useLogin from "../../hook/useLogin";
 import { useNavigate } from "react-router-dom";
 import {useLocation} from "react-router-dom";
 
-const Login = ({ setShowNav }) => {
+const Login = ({ setShowNav, setShowFooter }) => {
   const location = useLocation();
   if (location.pathname == "/Login") {
       setShowNav(false)
+      setShowFooter(false)
   }
+
 
 
     const navigate = useNavigate()

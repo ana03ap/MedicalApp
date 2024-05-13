@@ -1,4 +1,10 @@
 const Styles = {
+  containerPages1: {
+    backgroundColor :"#03707F",
+    // height: "130vh",
+   
+    color: "white",
+  },
     containerPages: {
       backgroundImage: "url('/img/LoginSteam.png')",
       // height: "130vh",
