@@ -50,7 +50,7 @@ const Footer = () => {
               <h2>SteamMedical</h2>
               <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"}/>
             </div>
-            <p >©2023 - SteamMedical.</p>
+            <p >©2024 - SteamMedical.</p>
             <p >Todos los derechos reservados.</p>
             <div
               style={{

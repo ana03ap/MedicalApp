@@ -1,16 +1,13 @@
 import React, { useContext } from "react";
-import useForm from '../../hook/useForm'
-import {AppContext} from '../../context/AppContext'
-import Card from '../../components/Card/Card'
+import useForm from "../../hook/useForm";
+import { AppContext } from "../../context/AppContext";
+import Card from "../../components/Card/Card";
+
 const Citas = () => {
   const { data, isMobileDevice } = useContext(AppContext);
-  console.log("hola")
-  
+  console.log("hola");
+
   return (
-
-
-
-    
     <div
       style={{
         display: "flex",
@@ -20,16 +17,32 @@ const Citas = () => {
         backgroundColor: "#ffff",
       }}
     >
-
-
-<div>
-  <p>hola</p>
-</div>
-
+      <div
+        style={{
+          backgroundImage: "url('../../../public/img/citas1.jpg')",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          color: "white",
+          height: "40vh",
+          width:'100%',
+          display: "flex",
+      
+          alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+          
+        }}
+      >
+        <h2>TU AGENDA, TU SALUD</h2>
+        <p>
+          Mantén el control con un vistazo a todas tus citas. ¡Cuidamos cada
+          momento de tu bienestar
+        </p>
+      </div>
 
       <div className="ContainerCard">
         {data.map((item) => (
-          
           <Card
             id={item.id}
             name={item.name}
@@ -41,13 +54,8 @@ const Citas = () => {
           />
         ))}
       </div>
-      
     </div>
   );
+};
 
-
-
-
-}
-
-export default Citas
+export default Citas;

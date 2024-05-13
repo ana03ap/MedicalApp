@@ -1,7 +1,9 @@
 import React from 'react'
 import '../Nav/index.css'
 import Logo from "../Logo"
+import { useNavigate } from "react-router-dom";
 const Nav = () => {
+  
     return (
         <>
             <nav className='navBar'>
@@ -15,13 +17,14 @@ const Nav = () => {
 
                 <div className="links">
                     <ul><li>
-                    
-                        <a href='\Login'>Inicia Sesión</a></li>
+                   
+
+                        <a href='/Login'>Inicia Sesión </a></li>
                         </ul>
 
 
-                    <ul><li><a href="\Citas">Services</a></li></ul>
-                    <ul><li><a href="\">About</a></li></ul>
+                    <ul><li><a href="/Citas">Services</a></li></ul>
+                    <ul><li><a href="/">About</a></li></ul>
                 </div>
 
 
