@@ -1,7 +1,7 @@
 import React, {createContext, useEffect, useState } from 'react'
 
 import useLogin from '../hook/useLogin';
-import apiMedical from "../api/Medical";
+import apiMedical from "../Api/Medical";
 
 import { isMobile } from "react-device-detect";
 

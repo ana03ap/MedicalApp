@@ -16,12 +16,12 @@ const Nav = () => {
                 <div className="links">
                     <ul><li>
                     
-                        <a href='\Login'>Contact us</a></li>
+                        <a href='\Login'>Inicia Sesión</a></li>
                         </ul>
 
 
                     <ul><li><a href="\Citas">Services</a></li></ul>
-                    <ul><li><a href="#">About</a></li></ul>
+                    <ul><li><a href="\">About</a></li></ul>
                 </div>
 
 
