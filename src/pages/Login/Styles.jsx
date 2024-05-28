@@ -1,4 +1,7 @@
 const Styles = {
+
+
+
   containerPages1: {
     backgroundColor :"#03707F",
     // height: "130vh",

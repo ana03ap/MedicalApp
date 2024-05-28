@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import useForm from "../../hook/useForm";
 import { AppContext } from "../../context/AppContext";
 import Card from "../../components/Card/Card";
 import Nav from "../../components/Nav/index";
+import '../Citas/index.css'
+import '../../../src/index.css'
+import FormPpl from "../../components/Formulario/FormPpl";
 const Citas = () => {
   const { data, isMobileDevice } = useContext(AppContext);
   console.log("hola");
@@ -40,12 +42,27 @@ const Citas = () => {
       >
         <h2>TU AGENDA, TU SALUD</h2>
         <p>
-          Mantén el control con un vistazo a todas tus citas. ¡Cuidamos cada
-          momento de tu bienestar
+          Mantén el control de tus citas. ¡Cuidamos cada
+          momento de tu bienestar emocional!
         </p>
       </div>
+<div className="available">
+<h2>Nuestros psicólogos disponibles</h2>
 
-      <div className="ContainerCard">
+<div id="botomnes-filtro">
+
+  <button>Psicodinamica</button>
+  <button>Cognitiva</button>
+  <button>Psicoanalisis</button>
+  <button>Humanista</button>
+  <button>TCC</button>
+  <button>Psicodinamica</button>
+  <button>Sistemico</button>
+  <button>AC</button>
+  <button>interpersonal</button>
+</div>
+
+<div className="ContainerCard">
         {data.map((item) => (
           <Card
             id={item.id}
@@ -58,6 +75,14 @@ const Citas = () => {
           />
         ))}
       </div>
+</div>
+
+
+
+
+<div id="form-citas">
+  <FormPpl/>
+</div>
     </div>
     </>
    

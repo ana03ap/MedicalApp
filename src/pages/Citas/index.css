@@ -1,0 +1,12 @@
+.available h2{
+text-align: center;
+margin-top: 10px;
+}
+
+#botomnes-filtro{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
