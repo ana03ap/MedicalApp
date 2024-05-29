@@ -6,7 +6,7 @@ import Nav from './components/Nav/index.jsx'
 import Footer from './components/Footer/Footer'
 import Login from './pages/Login/Login'
 import Citas from './pages/Citas/Citas'
-import FormPpl from './components/Formulario/FormPpl'
+
 const App = () => {
 
   const [showNav, setShowNav] = useState(true)
@@ -24,7 +24,6 @@ const App = () => {
                 <Route path="/" element={<HomePage   />} />
                 <Route path="/Login" element={<Login setShowNav={setShowNav} setShowFooter={setShowFooter}  />} />
                 <Route path="/Citas" element={<Citas  />} />
-                <Route path="/Form" element={<FormPpl  />} />
             </Routes>
         </BrowserRouter>
 

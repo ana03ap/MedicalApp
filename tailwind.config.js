@@ -1,21 +1,17 @@
-// module.exports = {
-//   purge: [],
-//   darkMode: false, // or 'media' or 'class'
-//   theme: {
-//     extend: {},
-//   },
-//   variants: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['../', './src/**/*.jsx'],
+  fontFamily: {
+    'sans': ['Poppins', 'sans-serif'],
+  },
+  content: [
+    "./public/index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  colors: {
+    'customIndigo': '#03707F',
+  },
   theme: {
     extend: {},
   },
   plugins: [],
 }
-

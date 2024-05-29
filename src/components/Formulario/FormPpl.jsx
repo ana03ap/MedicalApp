@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Formulario from "./Formulario"
 import Header from "./Header"
 import ListadoPacientes from "./ListaPacientes"
-
+import './indexForm.css'
 
 function FormPpl() {
 

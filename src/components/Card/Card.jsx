@@ -12,9 +12,9 @@ const Card = ({
 }) => {
   return (
     <div className="Card">
-    <img id="persona" src={imagen} alt={name} />
+    <img id="persona" src={imagen} alt={name}  />
 
-    <h1 id="name">
+    <h1 id="name" className="text-white font-bold">
         {name[0]} {name[1]}
     </h1>
     <p id="edad">{age}</p>

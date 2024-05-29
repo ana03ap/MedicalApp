@@ -46,21 +46,14 @@ const Citas = () => {
           momento de tu bienestar emocional!
         </p>
       </div>
-<div className="available">
-<h2>Nuestros psicólogos disponibles</h2>
+<div className="available font-bold">
+<h2 style={{
+fontSize:'2pc'
 
-<div id="botomnes-filtro">
+  
+}}>Nuestros psicólogos disponibles</h2>
 
-  <button>Psicodinamica</button>
-  <button>Cognitiva</button>
-  <button>Psicoanalisis</button>
-  <button>Humanista</button>
-  <button>TCC</button>
-  <button>Psicodinamica</button>
-  <button>Sistemico</button>
-  <button>AC</button>
-  <button>interpersonal</button>
-</div>
+
 
 <div className="ContainerCard">
         {data.map((item) => (
@@ -90,3 +83,5 @@ const Citas = () => {
 };
 
 export default Citas;
+
+
