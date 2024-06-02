@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import {GlobalStyles} from '../../styles/GlobalStyles'
+import { GlobalStyles } from "../../styles/GlobalStyles";
 import Styles from "./Styles";
 import ReactIcon, {
   ColombiaGov,
@@ -11,30 +11,32 @@ import ReactIcon, {
   Instagram,
   YouTube,
 } from "../../../public/svg/index";
+
 import ApiMedical from "../../Api/Medical";
 import Logo from "../../components/Logo";
 import useForm from "../../hook/useForm";
 import useLogin from "../../hook/useLogin";
 import { useNavigate } from "react-router-dom";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 
 const Login = ({ setShowNav, setShowFooter }) => {
   const location = useLocation();
   if (location.pathname == "/Login") {
-      setShowNav(false)
-      setShowFooter(false)
+    setShowNav(false);
+    setShowFooter(false);
   }
 
+  const navigate = useNavigate();
+  const { OnchangeForm, setForm, state } = useForm({
+    email: "",
+    password: "",
+  });
+  const { CreateUser } = useLogin();
 
-
-    const navigate = useNavigate()
-  const {OnchangeForm, setForm, state} = useForm({
-    email: '',
-    password: '',
-  })
-  const {CreateUser} = useLogin()
- 
-  console.log(state)
+  console.log(state);
   useEffect(() => {
     const GetaData = async () => {
       const users = await ApiMedical.get("/testimony");
@@ -46,17 +48,18 @@ const Login = ({ setShowNav, setShowFooter }) => {
     <div style={Styles.containerPages}>
       <div style={{ display: "flex" }}>
         <div style={{ ...Styles.containerSection, ...GlobalStyles.colum }}>
-          <h1 >STEAM MEDICAL</h1>
-          <p>
-            ¡Bienvenido de nuevo! Por favor ingrese sus datos.
-          </p>
-          <form style={{ ...Styles.Form, ...Styles.P }} onSubmit={(e) =>{
-            e.preventDefault()
-            console.log('se enviop')
-            CreateUser(state)
-            setForm()
-            navigate('/')
-          }}>
+          <h1>STEAM MEDICAL</h1>
+          <p>¡Bienvenido de nuevo! Por favor ingrese sus datos.</p>
+          <form
+            style={{ ...Styles.Form, ...Styles.P }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              console.log("se enviop");
+              CreateUser(state);
+              setForm();
+              navigate("/");
+            }}
+          >
             <label htmlFor="email" style={Styles.containerInput}>
               <p>Email</p>
               <input
@@ -64,7 +67,9 @@ const Login = ({ setShowNav, setShowFooter }) => {
                 placeholder="Ingresa tu Email"
                 name="email"
                 style={GlobalStyles.borderBtn}
-                onChange={({target: {name, value}}) => OnchangeForm(value,name)}
+                onChange={({ target: { name, value } }) =>
+                  OnchangeForm(value, name)
+                }
                 value={state.email}
               />
             </label>
@@ -75,14 +80,16 @@ const Login = ({ setShowNav, setShowFooter }) => {
                 placeholder="Ingresa tu Contraseña"
                 name="password"
                 style={GlobalStyles.borderBtn}
-                onChange={({target: {value, name}}) => OnchangeForm(value, name)}
+                onChange={({ target: { value, name } }) =>
+                  OnchangeForm(value, name)
+                }
                 value={state.password}
               />
             </label>
             <button style={{ ...GlobalStyles.borderBtn, ...Styles.P }}>
               Iniciar sesión
             </button>
-            <button 
+            <button
               style={{
                 ...GlobalStyles.borderBtn,
                 display: "flex",
@@ -91,13 +98,22 @@ const Login = ({ setShowNav, setShowFooter }) => {
                 gap: "0.6pc",
                 ...Styles.P,
               }}
-              onClick={(e) => {
-                e.preventDefault();
-               
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              // }}
             >
-              <Google width={2} color={"#fff"} />
-              Inicia sesión con Google
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  console.log(credentialResponse);
+                  const decoded = jwtDecode(credentialResponse?.credential);
+                  console.log(decoded.picture);
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+              />
+              {/* <Google width={2} color={"#fff"} />
+              Inicia sesión con Google */}
             </button>
           </form>
         </div>
@@ -153,10 +169,10 @@ const Login = ({ setShowNav, setShowFooter }) => {
               }}
             >
               <h2>SteamMedical</h2>
-              <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"}/>
+              <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"} />
             </div>
-            <p >©2023 - SteamMedical.</p>
-            <p >Todos los derechos reservados.</p>
+            <p>©2023 - SteamMedical.</p>
+            <p>Todos los derechos reservados.</p>
             <div
               style={{
                 display: "flex",
