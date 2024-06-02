@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext} from "react";
 import Error from "./Error";
+import { AuthContext } from '../../context/AuthContext';
+
 
 const Formulario = ({ setPacientes, pacientes, paciente, setPaciente }) => {
+  const { userGoogleData } = useContext(AuthContext);// vaina pa traerme lo del login
+console.log(userGoogleData)
+
   const [nombre, setNombre] = useState("");
   const [propietario, setPropietario] = useState("");
   const [email, setEmail] = useState("");
@@ -48,7 +53,7 @@ const Formulario = ({ setPacientes, pacientes, paciente, setPaciente }) => {
       setExito(false);
     }, 5000);
 
-    // Objeto pasiente
+    // Objeto paciente
     const objetoPaciente = {
       nombre,
       propietario,
@@ -110,7 +115,7 @@ const Formulario = ({ setPacientes, pacientes, paciente, setPaciente }) => {
             htmlFor="mascota"
             className="block text-gray-700 uppercase font-bold"
           >
-            Nombre Psicologo
+            Nombre Psicólogo
           </label>
 
           <input
@@ -134,7 +139,7 @@ const Formulario = ({ setPacientes, pacientes, paciente, setPaciente }) => {
           <input
             id="propietario"
             type="text"
-            placeholder="Nombre"
+            placeholder={userGoogleData ? userGoogleData.name : 'nombre'}
             className="border-2 w-full mt-2 p-2 placeholder-gray-400 rounded-md"
             value={propietario}
             onChange={(e) => setPropietario(e.target.value)}
@@ -152,7 +157,7 @@ const Formulario = ({ setPacientes, pacientes, paciente, setPaciente }) => {
           <input
             id="email"
             type="email"
-            placeholder="email"
+            placeholder={userGoogleData ? userGoogleData.email : 'email'}
             className="border-2 w-full mt-2 p-2 placeholder-gray-400 rounded-md"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

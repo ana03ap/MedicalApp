@@ -134,6 +134,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
             ...GlobalStyles.center,
             alignItems: "end",
             justifyContent: "flex-start",
+            
           }}
         >
           <p
@@ -163,6 +164,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
             padding: "0 15pc",
           }}
         >
+
           <div
             style={{
               display: "flex",
@@ -170,6 +172,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
               flexDirection: "column",
               // border: "1px solid red",
               width: "19pc",
+              paddingTop:'2pc',
             }}
           >
             <div
@@ -179,10 +182,10 @@ const Login = ({ setShowNav, setShowFooter }) => {
                 gap: "0.6pc",
               }}
             >
-              <h2>SteamMedical</h2>
+              <h2>Medical App</h2>
               <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"} />
             </div>
-            <p>©2023 - SteamMedical.</p>
+            <p>©2024 - MedicalApp.</p>
             <p>Todos los derechos reservados.</p>
             <div
               style={{
