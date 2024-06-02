@@ -1,6 +1,5 @@
-
 import React, { useContext, useEffect } from "react";
-import {GlobalStyles} from '../../styles/GlobalStyles'
+import { GlobalStyles } from "../../styles/GlobalStyles";
 import Styles from "../../pages/Login/Styles";
 import ReactIcon, {
   ColombiaGov,
@@ -15,12 +14,10 @@ import ReactIcon, {
 
 import Logo from "../../components/Logo";
 
-
 const Footer = () => {
-
   return (
     <div style={Styles.containerPages1}>
- <div style={{ display: "flex" }}>
+      <div style={{ display: "flex" }}>
         <div
           style={{
             ...Styles.containerSection,
@@ -47,11 +44,11 @@ const Footer = () => {
                 gap: "0.6pc",
               }}
             >
-              <h2>SteamMedical</h2>
-              <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"}/>
+              <h2>MedicalApp</h2>
+              <Logo color={"#fff"} widthSvg={"2pc"} colorHover={"red"} />
             </div>
-            <p >©2024 - SteamMedical.</p>
-            <p >Todos los derechos reservados.</p>
+            <p>©2024 - MedicalApp.</p>
+            <p>Todos los derechos reservados.</p>
             <div
               style={{
                 display: "flex",
@@ -69,15 +66,9 @@ const Footer = () => {
             <ColombiaGov />
           </div>
         </div>
-
       </div>
-
     </div>
-   
-)
-
-
+  )
 }
- 
 
 export default Footer

@@ -5,6 +5,8 @@ import Nav from "../../components/Nav/index";
 import '../Citas/index.css'
 import '../../../src/index.css'
 import FormPpl from "../../components/Formulario/FormPpl";
+
+import Footer from '../../components/Footer/Footer'
 const Citas = () => {
   const { data, isMobileDevice } = useContext(AppContext);
   console.log("hola");
@@ -25,7 +27,7 @@ const Citas = () => {
      
       <div
         style={{
-          backgroundImage: "url('../../../public/img/citas1.jpg')",
+          backgroundImage: "url('public/img/citas1.jpg')",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -77,6 +79,8 @@ fontSize:'2pc'
   <FormPpl/>
 </div>
     </div>
+
+    <Footer/>
     </>
    
   );

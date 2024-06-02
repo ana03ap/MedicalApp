@@ -48,7 +48,14 @@ const Login = ({ setShowNav, setShowFooter }) => {
     <div style={Styles.containerPages}>
       <div style={{ display: "flex" }}>
         <div style={{ ...Styles.containerSection, ...GlobalStyles.colum }}>
-          <h1>STEAM MEDICAL</h1>
+          <h1
+            className="available font-bold"
+            style={{
+              fontSize: "4pc",
+            }}
+          >
+            MEDICAL APP
+          </h1>
           <p>¡Bienvenido de nuevo! Por favor ingrese sus datos.</p>
           <form
             style={{ ...Styles.Form, ...Styles.P }}
@@ -57,7 +64,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
               console.log("se enviop");
               CreateUser(state);
               setForm();
-              navigate("/");
+              // navigate("/");
             }}
           >
             <label htmlFor="email" style={Styles.containerInput}>
@@ -98,9 +105,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
                 gap: "0.6pc",
                 ...Styles.P,
               }}
-              // onClick={(e) => {
-              //   e.preventDefault();
-              // }}
+              
             >
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
@@ -192,7 +197,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Login;

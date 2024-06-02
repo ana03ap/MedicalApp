@@ -15,6 +15,7 @@ const Styles = {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       color: "white",
+      paddingTop:"5pc",
     },
     containerSection: {
       // border: "1px solid red",
