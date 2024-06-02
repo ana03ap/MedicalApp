@@ -9,8 +9,9 @@ const AuthProvider = ({ children }) => {
     setUserGoogleData(data);
   };
 
+
   return (
-    <AuthContext.Provider value={{ userGoogleData, saveUserGoogleData }}>
+    <AuthContext.Provider value={{ userGoogleData, setUserGoogleData }}>
       {children}
     </AuthContext.Provider>
   );

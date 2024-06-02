@@ -5,9 +5,13 @@ import Nav from "../../components/Nav/index";
 import '../Citas/index.css'
 import '../../../src/index.css'
 import FormPpl from "../../components/Formulario/FormPpl";
+import { AuthContext } from '../../context/AuthContext';
+
 
 import Footer from '../../components/Footer/Footer'
 const Citas = () => {
+  const { userGoogleData } = useContext(AuthContext);// vaina pa traerme lo del login
+  console.log(userGoogleData)
   const { data, isMobileDevice } = useContext(AppContext);
   console.log("hola");
 

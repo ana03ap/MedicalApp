@@ -21,8 +21,12 @@ import { useLocation } from "react-router-dom";
 
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
+import { AuthContext } from '../../context/AuthContext';
 
 const Login = ({ setShowNav, setShowFooter }) => {
+
+  const { setUserGoogleData } = useContext(AuthContext);//creando la variable pa mandar las cosas pa citas
+
   const location = useLocation();
   if (location.pathname == "/Login") {
     setShowNav(false);
@@ -111,7 +115,9 @@ const Login = ({ setShowNav, setShowFooter }) => {
                 onSuccess={(credentialResponse) => {
                   console.log(credentialResponse);
                   const decoded = jwtDecode(credentialResponse?.credential);
+                  setUserGoogleData(decoded);// aqui voy a guardar la info cuando me loguee
                   console.log(decoded.picture);
+                  navigate("/")
                 }}
                 onError={() => {
                   console.log("Login Failed");
