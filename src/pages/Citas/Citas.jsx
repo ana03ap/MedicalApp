@@ -27,7 +27,7 @@ const Citas = () => {
      
       <div
         style={{
-          backgroundImage: "url('public/img/citas1.jpg')",
+          backgroundImage: "url('../../../img/citas1.jpg')",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

@@ -64,7 +64,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
               console.log("se enviop");
               CreateUser(state);
               setForm();
-              // navigate("/");
+              // navigate("/")
             }}
           >
             <label htmlFor="email" style={Styles.containerInput}>
@@ -200,4 +200,4 @@ const Login = ({ setShowNav, setShowFooter }) => {
   )
 }
 
-export default Login;
+export default Login
