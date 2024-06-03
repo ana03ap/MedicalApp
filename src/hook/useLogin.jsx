@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 const useLogin = () => {
-    const [isLogin, setIsLogin] = useState(false)
+  const [isLogin, setIsLogin] = useState(false)
   const CreateUser = (user) => {
     console.log(user)
     localStorage.setItem('user', JSON.stringify(user))
@@ -10,7 +10,7 @@ const useLogin = () => {
     const UserLocal = JSON.parse(localStorage.getItem('user'))
     console.log(UserLocal)
     if (UserLocal) {
-        setIsLogin(true)
+      setIsLogin(true)
     } 
   } 
   return {

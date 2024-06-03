@@ -25,7 +25,7 @@ import { AuthContext } from '../../context/AuthContext';
 
 const Login = ({ setShowNav, setShowFooter }) => {
 
-  const { setUserGoogleData } = useContext(AuthContext);//creando la variable pa mandar las cosas pa citas
+  const { setUserGoogleData,setIsLogin2 } = useContext(AuthContext);//creando la variable pa mandar las cosas pa citas
 
   const location = useLocation();
   if (location.pathname == "/Login") {
@@ -117,6 +117,7 @@ const Login = ({ setShowNav, setShowFooter }) => {
                   const decoded = jwtDecode(credentialResponse?.credential);
                   setUserGoogleData(decoded);// aqui voy a guardar la info cuando me loguee
                   console.log(decoded.picture);
+                  setIsLogin2(true);//ponerlo que ya está logueado pa poder pedir citas
                   navigate("/")
                 }}
                 onError={() => {

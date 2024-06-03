@@ -1,0 +1,35 @@
+.carrito-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .carrito-container h1, .carrito-container h2, .carrito-container h3 {
+    text-align: center;
+  }
+  
+  .carrito-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .carrito-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00b7ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .carrito-container button:hover {
+    background-color: #146e92;
+  }
+  

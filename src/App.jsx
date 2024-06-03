@@ -6,6 +6,7 @@ import Nav from './components/Nav/index.jsx'
 import Login from './pages/Login/Login'
 import Citas from './pages/Citas/Citas'
 import Footer from './components/Footer/Footer'
+import Carrito from './pages//Carrito/Carrito'
 const App = () => {
     const [showNav, setShowNav] = useState(true)
     const [showFooter, setShowFooter] = useState(true)
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path="/" element={<HomePage   />} />
                 <Route path="/Login" element={<Login setShowNav={setShowNav} setShowFooter={setShowFooter}  />} />
                 <Route path="/Citas" element={<Citas  />} />
+                <Route path="/Carrito" element={<Carrito  />} />
                 <Route path="/Footer" element={<Footer />} />
             </Routes>
         </BrowserRouter>
