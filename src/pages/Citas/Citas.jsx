@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
 import Card from "../../components/Card/Card";
 import Nav from "../../components/Nav/index";
@@ -6,9 +6,10 @@ import "../Citas/index.css";
 import "../../../src/index.css";
 import FormPpl from "../../components/Formulario/FormPpl";
 import { AuthContext } from "../../context/AuthContext";
-import Carrito from "../Carrito/Carrito";
+
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Footer from "../../components/Footer/Footer";
 const Citas = () => {
@@ -19,12 +20,17 @@ const Citas = () => {
   const { data } = useContext(AppContext);
   console.log("en citas");
 
-  const location = useLocation();
-  if (location.pathname == "/Citas") {
-    if (isLogin2 == false) {
-      navigate("/Login")
+  
+
+
+  useEffect(() => {
+    // Verificar si el usuario está autenticado
+
+    // Si el usuario no está autenticado, redirigir a la página de inicio de sesión
+    if (!isLogin2) {
+      navigate('/Login');
     }
-  }
+  }, [navigate]);
   return (
     <>
       <Nav />
@@ -84,12 +90,23 @@ const Citas = () => {
         </div>
 
         <div id="form-citas">
-          {/* <button
-            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-            onClick={navigate("/Carrito")}
-          >
-            Pagar sus citas aquí!{" "}
-          </button> */}
+
+          <div className="flex justify-center">
+            <Link to="/Carrito">
+
+              <button
+                className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                onClick={navigate("/Carrito")}
+              >
+                Pagar sus citas aquí!{" "}
+              </button>
+
+            </Link>
+          </div>
+
+
+
+
           <FormPpl />
         </div>
       </div>
